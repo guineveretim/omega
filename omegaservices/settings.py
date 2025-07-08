@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-iu+*=!7)pd8=1$glti3tvuu%+3pi@_0ghr5^312x=1viiwej(z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['omegacleaningservices.co.zw']
+ALLOWED_HOSTS = ['omegacleaningservices.co.zw', '127.0.0.1:8000','127.0.0.1']
 
 
 # Application definition

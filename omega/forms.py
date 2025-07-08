@@ -2,8 +2,23 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordResetForm, SetPasswordForm
 from django.contrib.auth.models import User
 from .models import Booking, ContactUs
+from .models import Testimonial
 
 
+
+
+
+class TestimonialForm(forms.ModelForm):
+    class Meta:
+        model = Testimonial
+        fields = ['name', 'contact', 'testimonial']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+            # Optional: add placeholder
+            # field.widget.attrs['placeholder'] = field.label
 
 class UserLoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
