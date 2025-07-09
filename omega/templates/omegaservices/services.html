@@ -134,24 +134,24 @@
 
 <!-- Testimonials Display -->
 <div class="container-fluid bg-testimonial py-5" style="background-image: url('{% static 'images/clean.jpg' %}'); position: relative; background-size: cover; background-position: center;">
-     <div class="overlay"></div>
-    <div class="container py-5">
+    <div class="overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container py-5" style="position: relative; z-index: 1;">
         <div class="row">
             <div class="col-lg-7 pt-lg-5 pb-5">
                 <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Testimonial</h6>
                 <h1 class="section-title text-white mb-5">What Our Clients Say</h1>
                 <div class="owl-carousel testimonial-carousel position-relative">
                     {% for t in testimonials %}
-                    <div class="d-flex flex-column text-white">
+                    <div class="d-flex flex-column text-white mb-4 p-3 bg-dark bg-opacity-50 rounded">
                         <div class="d-flex align-items-center mb-3">
                             {% if t.image %}
-                                <img class="img-fluid" src="{{ t.image.url }}" alt="">
+                                <img class="img-fluid rounded-circle" src="{{ t.image.url }}" alt="" style="width:50px; height:50px;">
                             {% else %}
-                                <img class="img-fluid" src="{% static 'images/default.jpg' %}" alt="">
+                                <img class="img-fluid rounded-circle" src="{% static 'images/default.jpg' %}" alt="" style="width:50px; height:50px;">
                             {% endif %}
                             <div class="ml-3">
-                                <h5 class="text-primary">{{ t.name }}</h5>
-                                <i>{{ t.contact }}</i>
+                                <h5 class="text-primary mb-0">{{ t.name }}</h5>
+                                <small>{{ t.contact }}</small>
                             </div>
                         </div>
                         <p>{{ t.testimonial }}</p>
@@ -159,28 +159,12 @@
                     {% endfor %}
                 </div>
             </div>
-            <!-- Submission Form -->
-           <div class="col-lg-5" style="min-height: 400px;">
-    <div class="position-relative h-100 rounded overflow-hidden p-3">
-        <h3 style="color:white;">Submit Your Testimonial</h3>
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="mb-3">
-           <h5 style="color:white;">Name</h5>
-                {{ form.name }}
+            <!-- New static description with link -->
+            <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center" style="min-height: 400px;">
+                <h3 style="color:white;">Share Your Experience</h3>
+                <p style="color:white; text-align: center;">We value our clients' feedback. Want to share your testimonial? Visit our testimonials page to see what others say or to add your own.</p>
+                <a href="{% url 'home' %}#testimonials-section" class="btn btn-primary mt-3">View Testimonials</a>
             </div>
-            <div class="mb-3">
-            <h5 style="color:white;">Contact</h5>
-                {{ form.contact }}
-            </div>
-            <div class="mb-3">
-            <h5 style="color:white;">Testimonial</h5>
-                {{ form.testimonial }}
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-</div>
         </div>
     </div>
 </div>

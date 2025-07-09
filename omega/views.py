@@ -49,6 +49,22 @@ def about(request):
     return render(request, 'omegaservices/about.html')
 
 def services(request):
+    # Fetch testimonials to display
+    testimonials = Testimonial.objects.order_by('-created_at')  # latest first
+
+    # Handle form submission
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('services')  # Redirect to refresh page and show new testimonial
+    else:
+        form = TestimonialForm()
+
+    context = {
+        'testimonials': testimonials,
+        'form': form,
+    }
     return render(request, 'omegaservices/services.html')
 
 def contact(request):
