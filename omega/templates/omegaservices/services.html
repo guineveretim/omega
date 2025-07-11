@@ -13,6 +13,44 @@
 
 {% block content %}
 
+
+  <div class="container-fluid" style="position: relative; background-color:white;">
+  
+  <!-- Overlay -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+  
+  <!-- Content -->
+  <div style="max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; z-index: 2;">
+    <!-- Introduction Section with typing effect -->
+    <h2 style="text-align: center; margin-bottom: 20px; font-family: Arial, sans-serif; color: #fff; position: relative; height: 50px;">
+      <span id="typed-text" style="white-space: nowrap; border-right: 3px solid #fff; font-size: 24px; display: inline-block;"></span>
+    </h2>
+
+    <!-- Row with Images and Text -->
+    <div class="row align-items-center">
+      
+      <!-- Image occupying 6 columns -->
+      <div class="col-lg-6 col-md-6 mb-4" style="display: flex; justify-content: center;">
+        <img src="{% static 'images/IM.jpg' %}" alt="Team Member 1" style="max-width: 100%; max-height: 500px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;"
+             onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" 
+             onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';">
+      </div>
+      
+      <!-- Text occupying 6 columns -->
+      <div class="col-lg-6 col-md-6 mb-4" style="color: #fff; padding: 20px;">
+        <h3>Our Mission</h3>
+        <p>
+          We are committed to providing top-quality cleaning services that exceed our clients' expectations. Our dedicated team ensures every space shines with freshness and cleanliness.
+        </p>
+        <p>
+          Join us in maintaining a cleaner, healthier environment for everyone.
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 <!-- New Services Section -->
 <div id="our-services" class="container py-5" id="services" style="background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <h2 class="text-center mb-4" style="color: #007bff; font-weight: 700;">Our Cleaning Services</h2>
@@ -52,7 +90,10 @@
     </div>
 </div>
 
-   <!-- Portfolio Start -->
+
+  
+
+    <!-- Portfolio Start -->
     <div class="container-fluid bg-portfolio py-5">
         <div class="container py-5">
             <div class="row m-0 portfolio-container">
@@ -62,14 +103,9 @@
                             <img class="img-fluid w-100" src="{% static 'images/bed1.jpg' %}" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Project Name</h4>
+                            <h4 class="font-weight-bold mb-4">Standard cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-sm btn-secondary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -80,14 +116,9 @@
                              <img class="img-fluid w-100" src="{% static 'images/sofa.jpg' %}" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Project Name</h4>
+                            <h4 class="font-weight-bold mb-4">Office Cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-sm btn-secondary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -98,14 +129,9 @@
                              <img class="img-fluid w-100" src="{% static 'images/bedw.jpg' %}" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Project Name</h4>
+                            <h4 class="font-weight-bold mb-4">Spring cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-sm btn-secondary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -116,14 +142,9 @@
                              <img class="img-fluid w-100" src="{% static 'images/living.jpg' %}" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Project Name</h4>
+                            <h4 class="font-weight-bold mb-4">Carpet cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-sm btn-secondary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -134,14 +155,9 @@
                             <img class="img-fluid w-100" src="{% static 'images/kitchen.jpg' %}" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Project Name</h4>
+                            <h4 class="font-weight-bold mb-4">Move in/Out cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-sm btn-secondary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -152,14 +168,9 @@
                              <img class="img-fluid w-100" src="{% static 'images/pc.jpg' %}" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Project Name</h4>
+                            <h4 class="font-weight-bold mb-4">Events clean-up</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-sm btn-secondary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -207,5 +218,48 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+<script>
+  const texts = [
+    "Omega Cleaning Company!",
+    "Providing spotless cleaning services.",
+    "Meet our dedicated team at work."
+  ];
+  let index = 0;
+  let charIndex = 0;
+  const speed = 100; // typing speed in ms
+  const pause = 2000; // pause before erasing in ms
+  const typedSpan = document.getElementById('typed-text');
+
+  function type() {
+    if (charIndex < texts[index].length) {
+      typedSpan.textContent += texts[index][charIndex];
+      charIndex++;
+      setTimeout(type, speed);
+    } else {
+      setTimeout(erase, pause);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typedSpan.textContent = texts[index].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, speed);
+    } else {
+      index = (index + 1) % texts.length;
+      setTimeout(type, speed);
+    }
+  }
+
+  // Start the typing effect
+  window.onload = () => {
+    type();
+  };
+</script>
 
 {% endblock %}
