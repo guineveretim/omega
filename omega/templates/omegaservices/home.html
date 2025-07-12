@@ -1,5 +1,65 @@
 {% extends "master.html" %} 
 {% load static %}
+{% block styles %}
+<style>
+  .hover-shadow:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 0, 94, 0.5); /* semi-transparent purple overlay */
+    z-index: 0;
+  }
+
+  .team-img img {
+    width: 100%;
+    max-height: 300px; /* adjust as needed */
+    object-fit: cover; /* ensures image covers the area without distortion */
+}
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    z-index: 1000;
+    background: transparent; /* optional, if you want background */
+}
+
+.whatsapp-float {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5e;
+    text-decoration: none;
+}
+
+.whatsapp-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+</style>
+{% endblock %}
 {% block content %}
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
@@ -46,39 +106,41 @@
     <!-- Carousel End -->
 
 
-    <!-- Contact Info Start -->
-    <div class="container-fluid pb-5 contact-info">
-        <div class="row">
-            <div class="col-lg-4 p-0">
-                <div class="contact-info-item d-flex align-items-center justify-content-center  text-white py-4 py-lg-0" style="background: var(--secondary); color:white;">
-                    <i class="fa fa-3x fa-map-marker-alt text-secondarmr-4"></i>
-                    <div class="">
-                        <h6 class="mb-2" style="color:white;">Our Office</h6>
-                        <p class="m-0">29 Meldar Road, Randpark Ridge, SA</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0">
-                <div class="contact-info-item d-flex align-items-center justify-content-center  text-white py-4 py-lg-0" style="background: var(--secondary); color:white;">
-                    <i class="fa fa-3x fa-envelope-open text-white mr-4"></i>
-                    <div class="">
-                        <h6 class="mb-2" style="color:white;">Email Us</h6>
-                        <p class="m-0"  style="color:white;">info@omegacleaningservices.co.zw</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0">
-                <div class="contact-info-item d-flex align-items-center justify-content-center  text-white py-4 py-lg-0" style="background: var(--secondary); color:white;">
-                    <i class="fa fa-3x fa-phone-alt text-white mr-4"></i>
-                    <div class="">
-                        <h6 class="mb-2" style="color:white;">Call Us</h6>
-                        <p class="m-0">+27784487423</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Contact Info Start -->
+<div class="container-fluid contact-info bg-light py-4">
+  <div class="row text-center">
+    <!-- Office -->
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <div class="card border-0 h-100 hover-shadow" style="background: var(--secondary); color: white;">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+          <i class="fa fa-map-marker-alt fa-3x mb-3 text-white"></i>
+          <h6 class="mb-2">Our Office</h6>
+          <p class="mb-0">29 Meldar Road, Randpark Ridge, SA</p>
         </div>
+      </div>
     </div>
-    <!-- Contact Info End -->
+    <!-- Email -->
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <div class="card border-0 h-100 hover-shadow" style="background: var(--secondary); color: white;">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+          <i class="fa fa-envelope-open fa-3x mb-3 text-white"></i>
+          <h6 class="mb-2">Email Us</h6>
+          <p class="mb-0">info@omegacleaningservices.co.zw</p>
+        </div>
+      </div>
+    </div>
+    <!-- Call -->
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <div class="card border-0 h-100 hover-shadow" style="background: var(--secondary); color: white;">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+          <i class="fa fa-phone-alt fa-3x mb-3 text-white"></i>
+          <h6 class="mb-2">Call Us</h6>
+          <p class="mb-0">+27784487423</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
