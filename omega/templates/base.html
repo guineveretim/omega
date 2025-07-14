@@ -111,30 +111,29 @@
         {% block content %}
         {% endblock %}
         
-      
- <!-- Footer Start -->
+  <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-4 col-md-6 mb-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 mt-n3 display-4 text-primary">Klean</h1>
+                    <h1 class="m-0 mt-n3 display-4" style="color:purple;">OMEGA</h1>
                 </a>
-                
                 <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
                 <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
                 <p class="mb-0">Sunday: Closed</p>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>29 Meldar Road, Randpark Ridge, SA</p>
-                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+27784487423</p>
-                <p><i class="fa fa-envelope text-primary mr-2"></i>info@example.com</p>
+                <h4 class="font-weight-semi-bold  mb-4"  style="color:purple;">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"  style="color:purple;"></i>29 Meldar Road, Randpark Ridge, SA</p>
+                <p><i class="fa fa-phone-alt mr-2" style="color:purple;"></i>+27784487423</p>
+                <p><i class="fa fa-envelope mr-2" style="color:purple;"></i>info@omegacleaningservices.co.zw</p>
                 <div class="d-flex justify-content-start mt-4">
-                     <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/omegacleaningandgardening/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/omegacleaningandgardening/"  style="color:purple;"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="https://wa.me/+27784487423"  style="color:purple;"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <h4 class="font-weight-semi-bold mb-4"  style="color:purple;">Quick Links</h4>
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="{% url 'home'  %}"><i class="fa fa-angle-right mr-2"></i>Home</a>
                     <a class="text-white mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About Us</a>
@@ -142,33 +141,26 @@
                     <a class="text-white" href="{% url 'contact' %}"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
             </div>
-           
+        
         </div>
     </div>
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
         <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Omega</a>. All Rights Reserved.
+            <div class="col-12 text-center  mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#" ><span  style="color:purple;">Omega</span></a>. All Rights Reserved.
                 </p>
             </div>
-            <!--
-            <div class="col-lg-6 text-center text-md-right">
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center ">
                 <ul class="nav d-inline-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
+                        <a class="nav-link text-white py-0" href="{% url 'privacy_policy' %}">Privacy</a>
                     </li>
                 </ul>
             </div>
-            -->
+          
         </div>
     </div>
     <!-- Footer End -->
@@ -176,8 +168,14 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
+    
+    <!--WhatsApp-->
+<div class="whatsapp-container">
+    <a href="https://wa.me/+27784487423" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <span class="whatsapp-text" style="color:white;">Chat with us on WhatsApp!</span>
+</div>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

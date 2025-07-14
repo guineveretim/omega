@@ -64,11 +64,11 @@
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#header-carousel" data-slide-to="1"></li>
-                <li data-target="#header-carousel" data-slide-to="2"></li>
-            </ol>
+          <ol class="carousel-indicators">
+  <li data-target="#header-carousel" data-slide-to="0" class="active" style="background-color: purple;"></li>
+  <li data-target="#header-carousel" data-slide-to="1" style="background-color: white;"></li>
+  <li data-target="#header-carousel" data-slide-to="2" style="background-color: white;"></li>
+</ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="img-fluid" src="{% static 'images/kit.jpg' %}" alt="Image">
@@ -113,8 +113,8 @@
     <div class="col-lg-4 mb-4 mb-lg-0">
       <div class="card border-0 h-100 hover-shadow" style="background: var(--secondary); color: white;">
         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-          <i class="fa fa-map-marker-alt fa-3x mb-3 text-white"></i>
-          <h6 class="mb-2">Our Office</h6>
+          <i class="fa fa-map-marker-alt fa-3x mb-3" style="color: white;"></i>
+          <h6 class="mb-2" style="color: white;">Our Office</h6>
           <p class="mb-0">29 Meldar Road, Randpark Ridge, SA</p>
         </div>
       </div>
@@ -123,8 +123,8 @@
     <div class="col-lg-4 mb-4 mb-lg-0">
       <div class="card border-0 h-100 hover-shadow" style="background: var(--secondary); color: white;">
         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-          <i class="fa fa-envelope-open fa-3x mb-3 text-white"></i>
-          <h6 class="mb-2">Email Us</h6>
+          <i class="fa fa-envelope-open fa-3x mb-3 "style="color: white;"></i>
+          <h6 class="mb-2" style="color: white;">Email Us</h6>
           <p class="mb-0">info@omegacleaningservices.co.zw</p>
         </div>
       </div>
@@ -133,8 +133,8 @@
     <div class="col-lg-4 mb-4 mb-lg-0">
       <div class="card border-0 h-100 hover-shadow" style="background: var(--secondary); color: white;">
         <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-          <i class="fa fa-phone-alt fa-3x mb-3 text-white"></i>
-          <h6 class="mb-2">Call Us</h6>
+          <i class="fa fa-phone-alt fa-3x mb-3" style="color: white;"></i>
+          <h6 class="mb-2" style="color: white;">Call Us</h6>
           <p class="mb-0">+27784487423</p>
         </div>
       </div>
@@ -151,14 +151,14 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="d-flex flex-column align-items-center justify-content-center  rounded h-100 py-5 px-3">
-                        <i class="fa fa-5x fa-award text-primary mb-4"></i>
+                  <i class="fa fa-5x fa-award mb-4" style="color: purple;"></i>
                         <h1 class="display-2 text-white mb-2" data-toggle="counter-up">3</h1>
                         <h2 class="text-white m-0">Years Experience</h2>
                     </div>
                 </div>
                 <div class="col-lg-7 pt-5 pb-lg-5">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Learn About Us</h6>
-                    <h1 class="mb-4 section-title" style="color:white;">We Provide The Best Cleaning Services</h1>
+                    <h6 class="text-white font-weight-semi-bold text-uppercase mb-3">Learn About Us</h6>
+                    <h1 class="mb-4 section-title1" style="color:white;">We Provide The Best Cleaning Services</h1>
                      <h5 class=" mb-3" style="color:white;">Our team offers professional cleaning solutions tailored to your needs. With years of experience, we ensure a spotless and healthy environment for your home or business.</h5>
                     <p style="color:white;">We are committed to delivering top-quality cleaning services. Our experienced team uses the latest equipment and eco-friendly products to guarantee satisfaction. Whether it's residential or commercial cleaning, we handle every job with care and professionalism.</p>
                 </div>
@@ -178,10 +178,10 @@
         <div class="row align-items-center">
             <!-- Text Content -->
             <div class="col-lg-6">
-                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Services</h6>
-                <h1 class="mb-4 section-title text-white">Outstanding Cleaning Services for You</h1>
+                <h6 class="text-white font-weight-semi-bold text-uppercase mb-3">Our Services</h6>
+                <h1 class="mb-4 section-title1 text-white">Outstanding Cleaning Services for You</h1>
                 <p class="text-white">We provide professional cleaning solutions tailored to your needs. Our experienced team guarantees a spotless and healthy environment for your home or business.</p>
-                <a href="{% url 'services' %}#our-services"  target="_blank"  class="btn btn-primary mt-3 py-2 px-4">Learn More</a>
+                <a href="{% url 'services' %}#our-services"  target="_blank"  class="btn btn mt-3 py-2 px-4" style="background-color:purple;"><span style="color:white;">Learn More</span></a>
             </div>
             <!-- Carousel of Services -->
             <div class="col-lg-6 pt-5 pt-lg-0">
@@ -197,21 +197,46 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-7 pt-lg-5 pb-3">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Why Choose Us</h6>
-                    <h1 class="mb-4 section-title">3 Years Experience In Cleaning Industry</h1>
+                    <h6 class=" font-weight-semi-bold text-uppercase mb-3"  style="color:purple;">Why Choose Us</h6>
+                    <h1 class="mb-4 section-title1">3 Years Experience In Cleaning Industry</h1>
                     <p class="mb-4">With over three years of experience, we specialize in providing top-quality cleaning services tailored to meet your specific needs. Our dedicated team ensures a spotless environment, whether it's your home or business, using eco-friendly products and proven techniques. Trust us to deliver a cleaner, healthier space every time.</p>
                     <div class="row">
                         <div class="col-sm-4">
-                            <h1 class="text-secondary mb-2" data-toggle="counter-up">5+</h1>
-                            <h6 class="font-weight-semi-bold mb-sm-4">Our Cleaners</h6>
+                            <h1 class=" mb-2" data-toggle="counter-up" 
+                            
+                            style="color:purple;"
+                            
+                            >5+</h1>
+                            <h6 class="font-weight-semi-bold mb-sm-4" 
+                            
+                            style="color:purple;"
+                            
+                            >Our Cleaners</h6>
                         </div>
                         <div class="col-sm-4">
-                            <h1 class="text-secondary mb-2" data-toggle="counter-up">10+</h1>
-                            <h6 class="font-weight-semi-bold mb-sm-4">Happy Clients</h6>
+                            <h1 class=" mb-2" data-toggle="counter-up"
+                            
+                            style="color:purple;"
+                            
+                            >10+</h1>
+                            <h6 class="font-weight-semi-bold mb-sm-4"
+
+                             style="color:purple;"
+                            
+                            >Happy Clients</h6>
                         </div>
                         <div class="col-sm-4">
-                            <h1 class="text-secondary mb-2" data-toggle="counter-up">10+</h1>
-                            <h6 class="font-weight-semi-bold mb-sm-4">Projects Done</h6>
+                            <h1 class=" mb-2" data-toggle="counter-up"
+
+                             style="color:purple;"
+                            
+                            
+                            >10+</h1>
+                            <h6 class="font-weight-semi-bold mb-sm-4"
+
+                             style="color:purple;"
+                            
+                            >Projects Done</h6>
                         </div>
                     </div>
                 </div>
@@ -235,8 +260,8 @@
                         <div class="portfolio-img">
                             <img class="img-fluid w-100" src="{% static 'images/bed1.jpg' %}" alt="">
                         </div>
-                        <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Standard cleaning</h4>
+                        <div class="portfolio-text bg-purple">
+                            <h4 class="font-weight-bold mb-4">@OMEGA Cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                
                             </div>
@@ -248,8 +273,8 @@
                         <div class="portfolio-img">
                              <img class="img-fluid w-100" src="{% static 'images/sofa.jpg' %}" alt="">
                         </div>
-                        <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Office Cleaning</h4>
+                        <div class="portfolio-text bg-purple">
+                            <h4 class="font-weight-bold mb-4">@OMEGA Cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                
                             </div>
@@ -261,8 +286,8 @@
                         <div class="portfolio-img">
                              <img class="img-fluid w-100" src="{% static 'images/bedw.jpg' %}" alt="">
                         </div>
-                        <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Spring cleaning</h4>
+                        <div class="portfolio-text bg-purple">
+                            <h4 class="font-weight-bold mb-4">@OMEGA Cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                
                             </div>
@@ -274,8 +299,8 @@
                         <div class="portfolio-img">
                              <img class="img-fluid w-100" src="{% static 'images/living.jpg' %}" alt="">
                         </div>
-                        <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Carpet cleaning</h4>
+                        <div class="portfolio-text bg-purple">
+                            <h4 class="font-weight-bold mb-4">@OMEGA Cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                
                             </div>
@@ -287,8 +312,8 @@
                         <div class="portfolio-img">
                             <img class="img-fluid w-100" src="{% static 'images/kitchen.jpg' %}" alt="">
                         </div>
-                        <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Move in/Out cleaning</h4>
+                        <div class="portfolio-text bg-purple">
+                            <h4 class="font-weight-bold mb-4">@OMEGA Cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                 
                             </div>
@@ -300,8 +325,8 @@
                         <div class="portfolio-img">
                              <img class="img-fluid w-100" src="{% static 'images/pc.jpg' %}" alt="">
                         </div>
-                        <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Events clean-up</h4>
+                        <div class="portfolio-text bg-purple">
+                            <h4 class="font-weight-bold mb-4">@OMEGA Cleaning</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                
                             </div>
@@ -321,8 +346,8 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-7 pt-lg-5 pb-5">
-                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Testimonial</h6>
-                <h1 class="section-title text-white mb-5">What Our Clients Say</h1>
+                <h6 class=" font-weight-semi-bold text-uppercase mb-3" style="color:white;">Testimonial</h6>
+                <h1 class="section-title1 text-white mb-5">What Our Clients Say</h1>
                 <div class="owl-carousel testimonial-carousel position-relative">
                     {% for t in testimonials %}
                     <div class="d-flex flex-column text-white">
@@ -360,7 +385,8 @@
             <h5 style="color:white;">Testimonial</h5>
                 {{ form.testimonial }}
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn" style="background-color:purple;"><span style="color:white;">Submit</span></button>
+    
         </form>
     </div>
 </div>
